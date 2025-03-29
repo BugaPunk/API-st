@@ -5,14 +5,10 @@ import java.time.LocalDate;
 import lombok.experimental.SuperBuilder;
 
 @Data
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
-public class Estudiante {
-    private Long id;
-    private String nombre;
-    private String apellido;
-    private String email;
-    private LocalDate fechaNacimiento;
+public class Estudiante extends Persona {
     private String numeroInscripcion;
 }
