@@ -1,16 +1,6 @@
-# Universidad API
+# Universidad API Documentation
 
 API REST para gestión de estudiantes universitarios.
-
-## Documentación
-
-La documentación completa está disponible en [Writerside/topics/README.md](Writerside/topics/README.md)
-
-## Tecnologías
-
-- Java 21
-- Spring Boot 3.4.4
-- Maven
 
 ## Instalación
 
@@ -23,6 +13,23 @@ mvn clean install
 ```bash
 mvn spring-boot:run
 ```
+
+## Documentación de la API
+
+Para ver la documentación completa de los endpoints, consulta la [Documentación de la API de Estudiantes](./Writerside/topics/api-documentation.md).
+
+## Descripción General
+
+Este sistema proporciona una API REST para gestionar los recursos de una universidad, incluyendo:
+
+- Gestión de estudiantes
+- Información académica
+
+## Tecnologías Utilizadas
+
+- Spring Boot 3.4.4
+- Java 21
+- Maven
 
 ## Licencia
 
