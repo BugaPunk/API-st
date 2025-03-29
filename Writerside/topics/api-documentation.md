@@ -2,14 +2,25 @@
 
 Esta API proporciona endpoints para gestionar estudiantes en el sistema universitario.
 
+## URL Base
+```http
+http://localhost:8080
+```
+
 ## Endpoints
 
 ### Obtener todos los estudiantes
 
 Retorna una lista de todos los estudiantes registrados en el sistema.
 
+#### Request
 ```http
-GET /api/estudiantes
+GET http://localhost:8080/api/estudiantes
+```
+
+#### Curl
+```bash
+curl -X GET http://localhost:8080/api/estudiantes
 ```
 
 #### Respuesta
