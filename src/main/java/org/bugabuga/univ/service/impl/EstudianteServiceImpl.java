@@ -3,6 +3,7 @@ package org.bugabuga.univ.service.impl;
 import jakarta.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import org.bugabuga.univ.dto.EstudianteDTO;
 import org.bugabuga.univ.model.Estudiante;
 import org.bugabuga.univ.repository.EstudianteRepository;
@@ -32,6 +33,35 @@ public class EstudianteServiceImpl implements IEstudianteService {
             estudiantesDTO.add(convertToDTO(estudiante));
         }
         return estudiantesDTO;
+    }
+    
+    @Override
+    public Optional<EstudianteDTO> getEstudiantePorId(Long id) {
+        Estudiante estudiante = estudianteRepository.findById(id);
+        if (estudiante == null) {
+            return Optional.empty();
+        }
+        return Optional.of(convertToDTO(estudiante));
+    }
+    
+    @Override
+    public EstudianteDTO actualizarEstudiante(Long id, EstudianteDTO estudianteDTO) {
+        Estudiante estudianteExistente = estudianteRepository.findById(id);
+        if (estudianteExistente == null) {
+            return null;
+        }
+        
+        // Actualizar los datos del estudiante existente
+        estudianteExistente.setNombre(estudianteDTO.getNombre());
+        estudianteExistente.setApellido(estudianteDTO.getApellido());
+        estudianteExistente.setEmail(estudianteDTO.getEmail());
+        estudianteExistente.setFechaNacimiento(estudianteDTO.getFechaNacimiento());
+        estudianteExistente.setNumeroInscripcion(estudianteDTO.getNroInscripcion());
+        
+        // Guardar el estudiante actualizado
+        Estudiante estudianteActualizado = estudianteRepository.save(estudianteExistente);
+        
+        return convertToDTO(estudianteActualizado);
     }
 
     private EstudianteDTO convertToDTO(Estudiante entity) {

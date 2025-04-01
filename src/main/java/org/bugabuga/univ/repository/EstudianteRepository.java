@@ -25,6 +25,10 @@ public class EstudianteRepository {
     public List<Estudiante> findAll() {
         return new ArrayList<>(estudiantes.values());
     }
+    
+    public Estudiante findById(Long id) {
+        return estudiantes.get(id);
+    }
 
     public void deleteById(Long id) {
         estudiantes.remove(id);

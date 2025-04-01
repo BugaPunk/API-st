@@ -57,6 +57,98 @@ curl -X GET http://localhost:8080/api/estudiantes
 | fechaNacimiento | Date | Fecha de nacimiento (formato: YYYY-MM-DD) |
 | nroInscripcion | String | Número de inscripción del estudiante |
 
+### Obtener un estudiante por ID
+
+Retorna la información de un estudiante específico según su ID.
+
+#### Request
+```http
+GET http://localhost:8080/api/estudiantes/{id}
+```
+
+#### Curl
+```bash
+curl -X GET http://localhost:8080/api/estudiantes/1
+```
+
+#### Respuesta
+
+```json
+{
+  "id": 1,
+  "nombre": "Estudiante 1",
+  "apellido": "App1",
+  "email": "estudiante1@gmail.com",
+  "fechaNacimiento": "2000-05-15",
+  "nroInscripcion": "S001"
+}
+```
+
+#### Campos de respuesta
+
+| Campo | Tipo | Descripción |
+|-------|------|-------------|
+| id | Long | Identificador único del estudiante |
+| nombre | String | Nombre del estudiante |
+| apellido | String | Apellido del estudiante |
+| email | String | Correo electrónico del estudiante |
+| fechaNacimiento | Date | Fecha de nacimiento (formato: YYYY-MM-DD) |
+| nroInscripcion | String | Número de inscripción del estudiante |
+
+### Actualizar un estudiante
+
+Actualiza la información de un estudiante existente según su ID.
+
+#### Request
+```http
+PUT http://localhost:8080/api/estudiantes/{id}
+```
+
+#### Curl
+```bash
+curl -X PUT http://localhost:8080/api/estudiantes/1 \
+  -H "Content-Type: application/json" \
+  -d '{
+    "nombre": "Estudiante Actualizado",
+    "apellido": "Apellido Actualizado",
+    "email": "actualizado@gmail.com",
+    "fechaNacimiento": "2000-05-15",
+    "nroInscripcion": "S001"
+  }'
+```
+
+#### Request Body
+
+```json
+{
+  "nombre": "Estudiante Actualizado",
+  "apellido": "Apellido Actualizado",
+  "email": "actualizado@gmail.com",
+  "fechaNacimiento": "2000-05-15",
+  "nroInscripcion": "S001"
+}
+```
+
+#### Respuesta
+
+```json
+{
+  "id": 1,
+  "nombre": "Estudiante Actualizado",
+  "apellido": "Apellido Actualizado",
+  "email": "actualizado@gmail.com",
+  "fechaNacimiento": "2000-05-15",
+  "nroInscripcion": "S001"
+}
+```
+
+#### Códigos de respuesta
+
+| Código | Descripción |
+|--------|-------------|
+| 200 | OK - Estudiante actualizado correctamente |
+| 404 | Not Found - No se encontró el estudiante con el ID especificado |
+
 ## Modelo de datos
 
 ### EstudianteDTO
