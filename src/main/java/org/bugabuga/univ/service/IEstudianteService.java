@@ -8,4 +8,5 @@ public interface IEstudianteService {
     List<EstudianteDTO> getTodosLosEstudiantes();
     Optional<EstudianteDTO> getEstudiantePorId(Long id);
     EstudianteDTO actualizarEstudiante(Long id, EstudianteDTO estudianteDTO);
+    EstudianteDTO crearEstudiante(EstudianteDTO estudianteDTO);
 }

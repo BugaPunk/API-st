@@ -63,6 +63,18 @@ public class EstudianteServiceImpl implements IEstudianteService {
         
         return convertToDTO(estudianteActualizado);
     }
+    
+    @Override
+    public EstudianteDTO crearEstudiante(EstudianteDTO estudianteDTO) {
+        // Convertir DTO a entidad
+        Estudiante nuevoEstudiante = convertToEntity(estudianteDTO);
+        
+        // Guardar el nuevo estudiante en el repositorio
+        Estudiante estudianteGuardado = estudianteRepository.save(nuevoEstudiante);
+        
+        // Convertir la entidad guardada de vuelta a DTO y devolverla
+        return convertToDTO(estudianteGuardado);
+    }
 
     private EstudianteDTO convertToDTO(Estudiante entity) {
         return EstudianteDTO.builder()
