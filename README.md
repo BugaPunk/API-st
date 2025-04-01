@@ -6,20 +6,25 @@ API REST para gestión de estudiantes universitarios.
 
 ```
 src/main/java/org/bugabuga/univ/
-├── controller/
-│   └── EstudianteController.java
-├── dto/
-│   └── EstudianteDTO.java
-├── model/
-│   ├── Persona.java
-│   └── Estudiante.java
-├── repository/
-│   └── EstudianteRepository.java
-├── service/
-│   ├── IEstudianteService.java
-│   └── impl/
-│       └── EstudianteServiceImpl.java
+├── controller
+│   └── EstudianteController.java
+├── dto
+│   ├── DocenteDTO.java
+│   ├── EstudianteDTO.java
+│   └── MateriaDTO.java
+├── model
+│   ├── Docente.java
+│   ├── Estudiante.java
+│   ├── Materia.java
+│   └── Persona.java
+├── repository
+│   └── EstudianteRepository.java
+├── service
+│   ├── IEstudianteService.java
+│   └── impl
+│       └── EstudianteServiceImpl.java
 └── UnivApplication.java
+
 ```
 
 ## Instalación
