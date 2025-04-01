@@ -24,7 +24,6 @@ src/main/java/org/bugabuga/univ/
 │   └── impl
 │       └── EstudianteServiceImpl.java
 └── UnivApplication.java
-
 ```
 
 ## Instalación
