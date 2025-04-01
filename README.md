@@ -53,8 +53,4 @@ Para ver la documentación completa de los endpoints, consulte:
 
 ## Repositorio GitHub
 
-[Enlace al repositorio](https://github.com/tu-usuario/tu-repositorio)
-
-## Licencia
-
-Este proyecto está bajo la licencia MIT.
+[Enlace al repositorio](https://github.com/BugaPunk/API-st.git)
