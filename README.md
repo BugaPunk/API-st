@@ -1,6 +1,26 @@
-# Universidad API Documentation
+# Universidad API
 
 API REST para gestión de estudiantes universitarios.
+
+## Estructura del Proyecto
+
+```
+src/main/java/org/bugabuga/univ/
+├── controller/
+│   └── EstudianteController.java
+├── dto/
+│   └── EstudianteDTO.java
+├── model/
+│   ├── Persona.java
+│   └── Estudiante.java
+├── repository/
+│   └── EstudianteRepository.java
+├── service/
+│   ├── IEstudianteService.java
+│   └── impl/
+│       └── EstudianteServiceImpl.java
+└── UnivApplication.java
+```
 
 ## Instalación
 
@@ -14,22 +34,21 @@ mvn clean install
 mvn spring-boot:run
 ```
 
-## Documentación de la API
+## Documentación
 
-Para ver la documentación completa de los endpoints, consulta la [Documentación de la API de Estudiantes](./Writerside/topics/api-documentation.md).
-
-## Descripción General
-
-Este sistema proporciona una API REST para gestionar los recursos de una universidad, incluyendo:
-
-- Gestión de estudiantes
-- Información académica
+Para ver la documentación completa de los endpoints, consulte:
+- [Documentación de la API de Estudiantes](./Writerside/topics/api-documentation.md)
 
 ## Tecnologías Utilizadas
 
 - Spring Boot 3.4.4
 - Java 21
 - Maven
+- Lombok
+
+## Repositorio GitHub
+
+[Enlace al repositorio](https://github.com/tu-usuario/tu-repositorio)
 
 ## Licencia
 
