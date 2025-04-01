@@ -75,6 +75,16 @@ public class EstudianteServiceImpl implements IEstudianteService {
         // Convertir la entidad guardada de vuelta a DTO y devolverla
         return convertToDTO(estudianteGuardado);
     }
+    
+    @Override
+    public boolean eliminarEstudiante(Long id) {
+        Estudiante estudiante = estudianteRepository.findById(id);
+        if (estudiante == null) {
+            return false;
+        }
+        estudianteRepository.deleteById(id);
+        return true;
+    }
 
     private EstudianteDTO convertToDTO(Estudiante entity) {
         return EstudianteDTO.builder()

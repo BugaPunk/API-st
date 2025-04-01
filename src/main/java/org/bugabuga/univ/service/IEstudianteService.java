@@ -9,4 +9,5 @@ public interface IEstudianteService {
     Optional<EstudianteDTO> getEstudiantePorId(Long id);
     EstudianteDTO actualizarEstudiante(Long id, EstudianteDTO estudianteDTO);
     EstudianteDTO crearEstudiante(EstudianteDTO estudianteDTO);
+    boolean eliminarEstudiante(Long id);
 }
